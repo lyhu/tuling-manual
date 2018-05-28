@@ -15,6 +15,7 @@
   * [CentOS7.x 防火墙设置](1.-ji-chu-zu-jian/centos7.x-fang-huo-qiang-she-zhi.md)
   * [CentOS7.x 文件句柄设置](1.-ji-chu-zu-jian/centos7.x-wen-jian-ju-bing-she-zhi.md)
   * [CentOS6.x 加密狗软授权](1.-ji-chu-zu-jian/centos6.x-xia-jia-mi-gou-ruan-shou-quan-bu-shu-wen-dang.md)
+  * [CentOS6.x Glibc升级](1.-ji-chu-zu-jian/centos6.x-glibc-sheng-ji.md)
 * [2.语音识别](2.-yu-yin-shi-bie/README.md)
   * [在线听写服务-AST](2.-yu-yin-shi-bie/zai-xian-ting-xie-fu-wu.md)
   * [语音合成服务-TTS](2.-yu-yin-shi-bie/yu-yin-he-cheng-fu-wu.md)
