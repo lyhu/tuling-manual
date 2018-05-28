@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* Initial page
+* [介绍](initial-page.md)
 * 1.基础组件
   * [Jdk1.8部署](1.-ji-chu-zu-jian/jdk1.8-bu-shu.md)
   * [Skynet部署](1.-ji-chu-zu-jian/skynet-bu-shu.md)
@@ -12,7 +12,7 @@
   * [ES5.4部署](1.-ji-chu-zu-jian/es5.4-bu-shu.md)
   * [MySQL部署](1.-ji-chu-zu-jian/mysql-bu-shu.md)
   * [CentOS7.X下修改主机名网络配置](1.-ji-chu-zu-jian/centos7.x-xia-xiu-gai-zhu-ji-ming-wang-luo-pei-zhi.md)
-  * [CentOS7.X 本地YUM配置](1.-ji-chu-zu-jian/ben-di-yum-pei-zhi.md)
+  * [CentOS7.X 本地YUM配置](1.-ji-chu-zu-jian/centos7.x-ben-di-yum-pei-zhi.md)
   * [CentOS7.x防火墙设置](1.-ji-chu-zu-jian/centos7.x-fang-huo-qiang-she-zhi.md)
   * [CentOS7.x 文件句柄设置](1.-ji-chu-zu-jian/centos7.x-wen-jian-ju-bing-she-zhi.md)
   * [CentOS6.X下加密狗软授权部署文档](1.-ji-chu-zu-jian/centos6.x-xia-jia-mi-gou-ruan-shou-quan-bu-shu-wen-dang.md)
