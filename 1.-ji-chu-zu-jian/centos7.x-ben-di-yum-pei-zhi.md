@@ -1,4 +1,4 @@
-# CentOS7.x 本地YUM配置
+# CentOS7.x本地YUM配置
 
 ## 创建系统光盘存放位置
 
