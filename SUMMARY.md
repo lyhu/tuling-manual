@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [介绍](jie-shao.md)
 * [1.基础组件](1.-ji-chu-zu-jian/README.md)
   * [Jdk1.8部署](1.-ji-chu-zu-jian/jdk1.8-bu-shu.md)
   * [Skynet部署](1.-ji-chu-zu-jian/skynet-bu-shu.md)
