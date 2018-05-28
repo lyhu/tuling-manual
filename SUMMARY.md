@@ -16,7 +16,7 @@
   * [CentOS7.x 文件句柄设置](1.-ji-chu-zu-jian/centos7.x-wen-jian-ju-bing-she-zhi.md)
   * [CentOS6.X下加密狗软授权部署文档](1.-ji-chu-zu-jian/centos6.x-xia-jia-mi-gou-ruan-shou-quan-bu-shu-wen-dang.md)
 * 2.语音识别
-  * 在线听写服务
+  * [在线听写服务](2.-yu-yin-shi-bie/zai-xian-ting-xie-fu-wu.md)
   * [语音合成服务](2.-yu-yin-shi-bie/yu-yin-he-cheng-fu-wu.md)
 * 3.语义认知
   * [语义解析服务-NLU](3.-yu-yi-ren-zhi/yu-yi-jie-xi-fu-wu-nlu.md)
