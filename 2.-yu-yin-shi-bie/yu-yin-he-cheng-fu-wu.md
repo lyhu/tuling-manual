@@ -2,7 +2,7 @@
 
 ## 解压压缩包
 
-```text
+```bash
 [root@sis01 lib]# cd /iflytek/engine/lib/
 [root@sis01 lib]# ls
 ast_chin  log  ssm
@@ -53,7 +53,7 @@ TTS授权需要向公司杨蕾leiyang6申请，申请的信息格式如下
 
 执行安装操作
 
-```text
+```bash
 [root@sis01 yum-repo]# cd /iflytek/engine/lib/xtts10/dongle/Sentinel_HASP_Linux_Run-time_Installer_script_v1.15
 [root@sis01 yum-repo]# 
 [root@sis01 yum-repo]# ls
@@ -80,7 +80,7 @@ press ENTER
 
 检查授权
 
-```text
+```bash
 [root@sis01 Sentinel_HASP_Linux_Run-time_Installer_script_v1.15]# ./haspman 
 iFly HaspMan 4.0.0.1002 Copyright 1999-2005 by iFly Info.Tek. All rights reserved.
 
@@ -111,7 +111,7 @@ Total 1 dongles found.
 
 安装ffmpeg工具，将tools.zip文件拷贝到/iflytek/engine/lib，进行解压
 
-```text
+```bash
 [root@sis01 lib]# ls
 ast_chin  log  ssm  xtts10
 [root@sis01 lib]# ls
@@ -139,7 +139,7 @@ ast_chin  log  ssm  tools  xtts10
 
 拷贝tts插件到skynet的plugin目录
 
-```text
+```bash
 [root@sis01 plugin]# ls
 ant  readme.txt  sleuth  tuling-ssm  xmanager
 [root@sis01 plugin]# ls
@@ -175,7 +175,7 @@ ant  readme.txt  sleuth  tuling-ssm  tuling-tts  xmanager
 
 ## 赋予可执行权限
 
-```text
+```bash
 [root@sis01 plugin]# cd /iflytek/server/skynet/plugin/
 [root@sis01 plugin]# ls
 ant  readme.txt  sleuth  tuling-ssm  tuling-tts  xmanager
@@ -190,7 +190,7 @@ tuling.tts.sh
 
 ## 导入zk配置
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/server/skynet/plugin/tuling-tts/doc 
 [root@sis01 doc]# ls
 tts.zk.config
