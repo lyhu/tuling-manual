@@ -22,5 +22,5 @@
 * [3.语义认知](3.-yu-yi-ren-zhi/README.md)
   * [语义解析服务-NLU](3.-yu-yi-ren-zhi/yu-yi-jie-xi-fu-wu-nlu.md)
   * [语义蕴含服务-SSM](3.-yu-yi-ren-zhi/yu-yi-yun-han-fu-wu-ssm.md)
-* 4.图像识别
+* [4.图像识别](4.-tu-xiang-shi-bie.md)
 
