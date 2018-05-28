@@ -1,5 +1,6 @@
 # Table of contents
 
+* [Introduction](README.md)
 * Initial page
 * 1.基础组件
   * [Jdk1.8部署](1.-ji-chu-zu-jian/jdk1.8-bu-shu.md)
@@ -9,6 +10,7 @@
   * [Zookeeper部署](1.-ji-chu-zu-jian/zookeeper-bu-shu.md)
   * [Skynet部署](1.-ji-chu-zu-jian/skynet-bu-shu.md)
   * [本地YUM配置](1.-ji-chu-zu-jian/ben-di-yum-pei-zhi.md)
+  * [ZKUI部署](1.-ji-chu-zu-jian/zkui-bu-shu.md)
 * 2.语音识别
 * 3.语义认知
 * 4.图像识别
