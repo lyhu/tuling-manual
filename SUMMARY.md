@@ -13,6 +13,7 @@
   * [ZKUI部署](1.-ji-chu-zu-jian/zkui-bu-shu.md)
   * [CentOS7.X下修改主机名网络配置](1.-ji-chu-zu-jian/centos7.x-xia-xiu-gai-zhu-ji-ming-wang-luo-pei-zhi.md)
   * [CentOS7.x防火墙设置](1.-ji-chu-zu-jian/centos7.x-fang-huo-qiang-she-zhi.md)
+  * [CentOS7.x 文件句柄设置](1.-ji-chu-zu-jian/centos7.x-wen-jian-ju-bing-she-zhi.md)
 * 2.语音识别
 * 3.语义认知
 * 4.图像识别
