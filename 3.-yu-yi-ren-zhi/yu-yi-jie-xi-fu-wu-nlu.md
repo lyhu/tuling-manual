@@ -2,7 +2,7 @@
 
 ## 解压压缩包
 
-```text
+```bash
 [root@sis01 lib]# cd /iflytek/engine/lib/
 [root@sis01 lib]# ls
 ast_chin  log  ssm  tools  xtts10
@@ -35,7 +35,7 @@ bin  res_pack_en_us  res_pack_zh_cn_cantonese  res_pack_zh_cn_mandarin  version.
 
 替换语义资源到res\_pack\_zh\_cn\_mandarin目录
 
-```text
+```bash
 [root@sis01 nlu]# cd /iflytek/engine/lib/nlu/res_pack_zh_cn_mandarin/
 [root@sis01 res_pack_zh_cn_mandarin]# ls
 ifly_build.irf  ifly_nli.irf
@@ -44,7 +44,7 @@ ifly_build.irf  ifly_nli.irf
 
 ## 放置tuling-ssm组件
 
-```text
+```bash
 [root@sis01 plugin]# ls
 ant  readme.txt  sleuth  tuling-ssm  tuling-tts  xmanager
 [root@sis01 plugin]# ls
@@ -71,7 +71,7 @@ ant  readme.txt  sleuth  tuling-nlu  tuling-ssm  tuling-tts  xmanager
 
 ## 赋予执行权限
 
-```text
+```bash
 [root@sis01 conf]# cd /iflytek/server/skynet/plugin/tuling-nlu/conf
 [root@sis01 conf]# ls
 tuling-nlu.sh
@@ -85,7 +85,7 @@ tuling-nlu.sh
 
 创建数据库tuling-nlu，找到初始化脚本tuling-nlu.sql
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/server/skynet/plugin/tuling-nlu/doc
 [root@sis01 doc]# ls
 tuling-nlu.sql  tuling-nlu.zk.config
@@ -94,7 +94,7 @@ tuling-nlu.sql  tuling-nlu.zk.config
 
 ## 导入zk配置
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/server/skynet/plugin/tuling-nlu/doc 
 [root@sis01 doc]# ls
 tuling-nlu.sql  tuling-nlu.zk.config
@@ -103,7 +103,7 @@ tuling-nlu.sql  tuling-nlu.zk.config
 
 tuling-ssm.zk.config里面的文件内容细节如下
 
-```text
+```bash
 /skynet/plugin/tuling-nlu/setting=_jdbc_config={\n    "url": "jdbc:mysql://{$ref@setting:mysql_url}/tuling-nlu?characterEncoding=utf8&useSSL=false",\n    "driver": "com.mysql.jdbc.Driver",\n    "userName": "{$ref@setting:mysql_xuser}",\n    "password": "{$ref@setting:mysql_ypwd}",\n    "InitialSize": "50",\n    "MaxActive": "16300",\n    "MaxIdle": "16300",\n    "MinIdle": "1000",\n    "MaxWait": "10000",\n    "pageSize": "100"\n}
 /skynet/plugin/tuling-nlu/setting=mysql_url=192.168.83.240:3306
 /skynet/plugin/tuling-nlu/setting=mysql_xuser=root

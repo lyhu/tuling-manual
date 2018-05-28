@@ -6,7 +6,7 @@
 
 ## 解压压缩包
 
-```text
+```bash
 [root@sis01 server]# pwd
 /iflytek/server
 [root@sis01 server]# unzip activemq.zip 
@@ -28,7 +28,7 @@ apache-activemq-5.14.5/lib/geronimo-jta_1.0.1B_spec-1.0.1.jar
 
 ## 启动activemq
 
-```text
+```bash
 [root@sis01 bin]# pwd
 /iflytek/server/activemq/bin
 [root@sis01 bin]# ls
@@ -42,7 +42,7 @@ INFO: pidfile created : '/iflytek/server/activemq//data/activemq.pid' (pid '4040
 
 ## 验证activemq
 
-```text
+```bash
 [root@sis01 bin]# ./activemq status
 INFO: Loading '/iflytek/server/activemq//bin/env'
 INFO: Using java '/iflytek/java/jdk1.8.0_71/bin/java'

@@ -6,7 +6,7 @@
 
 ## 解压压缩包
 
-```text
+```bash
 [root@sis01 server]# pwd
 /iflytek/server
 [root@sis01 server]# unzip zkui2.0.zip 
@@ -25,7 +25,7 @@ Archive:  zkui2.0.zip
 
 ## 赋权可执行权限
 
-```text
+```bash
 [root@sis01 server]# cd zkui2.0/
 [root@sis01 zkui2.0]# ls
 config.cfg  README.md  start.sh  stop.sh  zkui-2.0-SNAPSHOT-jar-with-dependencies.jar  zkui.h2.db  zkui.log
@@ -34,11 +34,11 @@ config.cfg  README.md  start.sh  stop.sh  zkui-2.0-SNAPSHOT-jar-with-dependencie
 
 ## 编辑配置文件
 
-```text
+```bash
 [root@sis01 zkui2.0]# vim config.cfg
 ```
 
-```text
+```bash
 #Server Port
 serverPort=9090
 #Comma seperated list of all the zookeeper servers
@@ -75,7 +75,7 @@ jdbcPwd=manager
 
 ## 启动zkui2.0
 
-```text
+```bash
 [root@sis01 zkui2.0]# ls
 config.cfg  README.md  start.sh  stop.sh  zkui-2.0-SNAPSHOT-jar-with-dependencies.jar  zkui.h2.db  zkui.log
 [root@sis01 zkui2.0]# ./start.sh 
@@ -91,7 +91,7 @@ INFO: ./zkui-2.0-SNAPSHOT-jar-with-dependencies.jar is running! pid=39778
 
 #### 调整配置文件
 
-```text
+```bash
 [root@sis01 server]# tar -zxvf zookeeper.tar.gz
 [root@sis01 server]# rm -rf zookeeper.tar.gz
 [root@sis01 zookeeper]# pwd
@@ -114,7 +114,7 @@ INFO: ./zkui-2.0-SNAPSHOT-jar-with-dependencies.jar is running! pid=39778
 >
 > 创建目录/home/zookeeper
 >
-> ```text
+> ```bash
 > [root@sis01 conf]# mkdir /home/zookeeper
 > [root@sis01 conf]# echo "1" > /home/zookeeper/myid
 > [root@sis01 conf]#

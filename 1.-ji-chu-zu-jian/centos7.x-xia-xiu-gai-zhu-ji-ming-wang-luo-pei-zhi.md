@@ -28,7 +28,7 @@ iengine-dev
 >
 > 方案一、
 >
-> ```text
+> ```bash
 > [root@localhost ~]# hostnamectl set-hostname iengine-dev
 >
 > [root@localhost ~]# hostname

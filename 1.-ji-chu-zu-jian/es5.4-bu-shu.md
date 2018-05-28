@@ -8,7 +8,7 @@ es-5.4.0.tar.gz
 
 ### 解压压缩包
 
-```text
+```bash
 [root@sis01 server]# cd /iflytek/server/
 [root@sis01 server]# tar -zxvf es-5.4.0.tar.gz
 [root@sis01 server]# rm -rf es-5.4.0.tar.gz 
@@ -21,7 +21,7 @@ elasticsearch-head-master  es-sql-site  license.json               setup
 
 ### ES命令说明
 
-```text
+```bash
 [root@sis01 es-5.4.0]# ./es.sh 
  =========================================== 
  -- ES 5.4.0  help ..                    -- 
@@ -43,7 +43,7 @@ Usage:  elastic.sh [OPTIONS]
 
 此项操作仅第一次时需要
 
-```text
+```bash
 [root@sis01 es-5.4.0]# ./es.sh  setup
 sed: can't read /etc/security/limits.d/90-nproc.conf: No such file or directory
 fs.file-max = 655350
@@ -73,7 +73,7 @@ grunt.version: grunt-cli v1.2.0
 
 ### 启动ES
 
-```text
+```bash
 [root@sis01 es-5.4.0]# ./es.sh start
  =========================================== 
  -- ES 5.4.0  start ..                   -- 
@@ -100,7 +100,7 @@ grunt.version: grunt-cli v1.2.0
 
 此项操作仅第一次时需要
 
-```text
+```bash
 [root@sis01 es-5.4.0]# ./es.sh license
  =========================================== 
  -- ES 5.4.0  license ..                 -- 
@@ -114,7 +114,7 @@ Enter host password for user 'elastic':
 
 ES重启
 
-```text
+```bash
 [root@sis01 es-5.4.0]# ./es.sh  stop
  =========================================== 
  -- ES 5.4.0  stop ..                    -- 
@@ -152,7 +152,7 @@ ES重启
 
 ### 查看状态
 
-```text
+```bash
 [root@sis01 es-5.4.0]# ./es.sh status
  =========================================== 
  -- ES 5.4.0  status ..                  -- 
@@ -169,7 +169,7 @@ ES重启
 
 访问网址：[http://192.168.83.240:9233/可以看到如下返回：](http://192.168.83.240:9233/可以看到如下返回：)
 
-```text
+```javascript
 {
     "name": "node-01",
     "cluster_name": "elastic-x",

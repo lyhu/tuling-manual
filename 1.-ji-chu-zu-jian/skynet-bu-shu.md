@@ -2,7 +2,7 @@
 
 ## 解压压缩包
 
-```text
+```bash
 [root@sis01 server]# ls
 activemq  es-5.4.0  skynet-boot-build-2.0.0-SNAPSHOT-Build_1006.zip  zkui2.0  zookeeper
 [root@sis01 server]# unzip skynet-boot-build-2.0.0-SNAPSHOT-Build_1006.zip 
@@ -19,7 +19,7 @@ extracting: skynet-boot-build-2.0.0-SNAPSHOT/lib/jasypt-1.9.0.jar
 
 ## 重命名文件夹名称
 
-```text
+```bash
 [root@sis01 server]# rm -rf skynet-boot-build-2.0.0-SNAPSHOT-Build_1006.zip 
 [root@sis01 server]# mv skynet-boot-build-2.0.0-SNAPSHOT/ skynet
 [root@sis01 server]# ls
@@ -29,7 +29,7 @@ activemq  es-5.4.0  skynet  zkui2.0  zookeeper
 
 ## 赋予可执行权限
 
-```text
+```bash
 [root@sis01 bin]# cd /iflytek/server/skynet/bin/
 [root@sis01 bin]# ls
 ant-env.cmd     ant-server.sh   ant-worker.sh     ant-xmanager.sh  freeSSHd.exe
@@ -45,7 +45,7 @@ ant-server.cmd  ant-worker.cmd  ant-xmanager.cmd  deamon.sh        readme.txt
 
 编辑配置文件
 
-```text
+```bash
 [root@sis01 conf]# cd /iflytek/server/skynet/conf/
 [root@sis01 conf]# ls
 application.properties  keystore.p12  skynet.properties  skynet二次开发手册.pdf
@@ -54,7 +54,7 @@ application.properties  keystore.p12  skynet.properties  skynet二次开发手�
 
 文件内容如下
 
-```text
+```bash
 skynet.zookeeper.cluster_name=skynet
 skynet.zookeeper.server_list=127.0.0.1:2181
 skynet.zookeeper.session_timeout=20000
@@ -67,7 +67,7 @@ skynet.zookeeper.connection_timeout=30000
 
 找到配置文件skynet.zk.config
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/server/skynet/doc/
 [root@sis01 doc]# ls
 JSON-handle_0.5.6.crx  README.md  release.md  skynet.zk.config  skynet二次开发手册.md  skynet部署手册（2.0.0版本以上）.md
@@ -78,7 +78,7 @@ JSON-handle_0.5.6.crx  README.md  release.md  skynet.zk.config  skynet二次开�
 
 ## 启动skynet服务
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/server/skynet/bin/
 [root@sis01 bin]# ls
 ant-env.cmd     ant-server.sh   ant-worker.sh     ant-xmanager.sh  freeSSHd.exe

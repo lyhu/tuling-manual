@@ -10,7 +10,7 @@
 
 #### 调整配置文件
 
-```text
+```bash
 [root@sis01 server]# tar -zxvf zookeeper.tar.gz
 [root@sis01 server]# rm -rf zookeeper.tar.gz
 [root@sis01 zookeeper]# pwd
@@ -21,7 +21,7 @@
 
 编辑文件/iflytek/server/zookeeper/conf/zoo.cfg
 
-```text
+```bash
 [root@sis01 conf]# vim /iflytek/server/zookeeper/conf/zoo.cfg
 ```
 
@@ -33,7 +33,7 @@
 >
 > 创建目录/home/zookeeper
 >
-> ```text
+> ```bash
 > [root@sis01 conf]# mkdir /home/zookeeper
 > [root@sis01 conf]# echo "1" > /home/zookeeper/myid
 > [root@sis01 conf]#

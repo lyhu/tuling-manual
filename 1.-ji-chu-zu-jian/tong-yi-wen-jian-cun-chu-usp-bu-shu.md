@@ -6,7 +6,7 @@
 
 上传fastdfs安装包FastDFS\_v5.08.tar.gz和libfastcommon-master.zip
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/soft/
 [root@sis01 soft]# ls
 [root@sis01 soft]# ls
@@ -16,7 +16,7 @@ FastDFS_v5.08.tar.gz  libfastcommon-master.zip
 
 ### 解压压缩包
 
-```text
+```bash
 [root@sis01 soft]# tar -zxvf FastDFS_v5.08.tar.gz
 [root@sis01 soft]# unzip libfastcommon-master.zip
 01 soft]# ls
@@ -30,7 +30,7 @@ FastDFS  libfastcommon-master
 
 ### 安装libfastcommon-master
 
-```text
+```bash
 [root@sis01 soft]# cd libfastcommon-master/
 [root@sis01 libfastcommon-master]# ls
 HISTORY  INSTALL  libfastcommon.spec  make.sh  php-fastcommon  README  src
@@ -40,7 +40,7 @@ HISTORY  INSTALL  libfastcommon.spec  make.sh  php-fastcommon  README  src
 
 ### 安装FastDFS
 
-```text
+```bash
 [root@sis01 soft]# cd FastDFS/
 [root@sis01 FastDFS]# ls
 client  conf             fastdfs.spec  init.d   make.sh     README.md   stop.sh  test
@@ -51,7 +51,7 @@ common  COPYING-3_0.txt  HISTORY       INSTALL  php_client  restart.sh  storage 
 
 ### 创建存储目录
 
-```text
+```bash
 [root@sis01 iflytek]# mkdir -p /iflytek/data/fdfs/tracker
 [root@sis01 iflytek]# mkdir -p /iflytek/data/fdfs/storage
 [root@sis01 iflytek]# mkdir -p /iflytek/data/fdfs/client
@@ -67,7 +67,7 @@ storage  tracker  client nginx-module
 
 ### 配置tracker
 
-```text
+```bash
 [root@sis01 FastDFS]# cd /etc/fdfs/
 [root@sis01 fdfs]# ls
 client.conf.sample  storage.conf.sample  tracker.conf.sample
@@ -79,7 +79,7 @@ client.conf.sample  storage.conf.sample  tracker.conf  tracker.conf.sample
 
 配置配置文件
 
-```text
+```bash
 base_path=/iflytek/data/fdfs/tracker
 max_connections=4000
 reserved_storage_space = 8%
@@ -87,7 +87,7 @@ reserved_storage_space = 8%
 
 ### 启动tracker
 
-```text
+```bash
 [root@sis01 fdfs]# /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf start
 [root@sis01 fdfs]#
 ```
@@ -102,7 +102,7 @@ tcp        0      0 0.0.0.0:22122           0.0.0.0:*               LISTEN      
 
 ### 配置storage
 
-```text
+```bash
 [root@sis01 FastDFS]# cd /etc/fdfs/
 [root@sis01 fdfs]# ls
 client.conf.sample  storage.conf.sample  tracker.conf  tracker.conf.sample
@@ -115,7 +115,7 @@ client.conf.sample  storage.conf  storage.conf.sample  tracker.conf  tracker.con
 
 配置配置文件
 
-```text
+```bash
 base_path=/iflytek/data/fdfs/storage
 max_connections=4000
 store_path0=/iflytek/data/fdfs
@@ -125,14 +125,14 @@ http.server_port=9092
 
 ### 启动storage
 
-```text
+```bash
 [root@sis01 fdfs]# /usr/bin/fdfs_storaged /etc/fdfs/storage.conf start
 [root@sis01 fdfs]#
 ```
 
 ### 验证storage
 
-```text
+```bash
 [root@sis01 fdfs]# netstat -lntp | grep 23000
 tcp        0      0 0.0.0.0:23000           0.0.0.0:*               LISTEN      29932/fdfs_storaged 
 [root@sis01 fdfs]#
@@ -142,7 +142,7 @@ tcp        0      0 0.0.0.0:23000           0.0.0.0:*               LISTEN      
 
 配置client验证文件能否正常上传
 
-```text
+```bash
 [root@sis01 fdfs]# cd /etc/fdfs/
 [root@sis01 fdfs]# ls
 client.conf.sample  storage.conf  storage.conf.sample  tracker.conf  tracker.conf.sample
@@ -154,7 +154,7 @@ client.conf  client.conf.sample  storage.conf  storage.conf.sample  tracker.conf
 
 编辑配置文件
 
-```text
+```bash
 base_path=/iflytek/data/fdfs/client
 tracker_server=192.168.83.240:22122
 #include http.conf
@@ -162,7 +162,7 @@ tracker_server=192.168.83.240:22122
 
 从源码包中拷贝http.conf到/etc/fdfs/目录
 
-```text
+```bash
 [root@sis01 fdfs]# cd /etc/fdfs/
 [root@sis01 fdfs]# ls
 client.conf  client.conf.sample  storage.conf  storage.conf.sample  tracker.conf  tracker.conf.sample
@@ -174,13 +174,13 @@ client.conf  client.conf.sample  http.conf  storage.conf  storage.conf.sample  t
 
 编辑http.conf文件
 
-```text
+```bash
 http.anti_steal.token_check_fail=/etc/fdfs/anti-steal.jpg
 ```
 
 拷贝anti-steal.jpg图片
 
-```text
+```bash
 [root@sis01 fdfs]# cp /iflytek/soft/FastDFS/conf/anti-steal.jpg  /etc/fdfs/
 [root@sis01 fdfs]# ls
 anti-steal.jpg  client.conf  client.conf.sample  http.conf  storage.conf  storage.conf.sample  tracker.conf  tracker.conf.sample
@@ -189,7 +189,7 @@ anti-steal.jpg  client.conf  client.conf.sample  http.conf  storage.conf  storag
 
 拷贝mime.types
 
-```text
+```bash
 [root@sis01 fdfs]# cp /iflytek/soft/FastDFS/conf/mime.types  /etc/fdfs/
 [root@sis01 fdfs]# ls
 anti-steal.jpg  client.conf  client.conf.sample  http.conf  mime.types  storage.conf  storage.conf.sample  tracker.conf  tracker.conf.sample
@@ -198,7 +198,7 @@ anti-steal.jpg  client.conf  client.conf.sample  http.conf  mime.types  storage.
 
 验证图片上传
 
-```text
+```bash
 [root@sis01 fdfs]# /usr/bin/fdfs_test /etc/fdfs/client.conf upload anti-steal.jpg 
 This is FastDFS client test program v5.08
 
@@ -240,7 +240,7 @@ http.tracker_server_port=9092
 
 再次执行文件上传操作
 
-```text
+```bash
 [root@sis01 fdfs]# /usr/bin/fdfs_test /etc/fdfs/client.conf upload anti-steal.jpg 
 This is FastDFS client test program v5.08
 
@@ -278,7 +278,7 @@ example file url: http://192.168.83.240:9092/group1/M00/00/00/wKhT8FsMBJ2ALV8SAA
 
 上传nginx-1.10.3.tar.gz和fastdfs-nginx-module\_v1.16.tar.gz
 
-```text
+```bash
 [root@sis01 soft]# ls
 FastDFS  libfastcommon-master
 [root@sis01 soft]# 
@@ -290,7 +290,7 @@ FastDFS  fastdfs-nginx-module_v1.16.tar.gz  libfastcommon-master  nginx-1.10.3.t
 
 解压文件
 
-```text
+```bash
 [root@sis01 soft]# ls
 FastDFS  fastdfs-nginx-module_v1.16.tar.gz  libfastcommon-master  nginx-1.10.3.tar.gz
 [root@sis01 soft]# tar -zxvf fastdfs-nginx-module_v1.16.tar.gz 
@@ -304,7 +304,7 @@ FastDFS  fastdfs-nginx-module  libfastcommon-master  nginx-1.10.3
 
 安装基础编译和依赖包
 
-```text
+```bash
 [root@sis01 soft]# yum install -y gcc-c++
 [root@sis01 soft]# yum install -y pcre pcre-devel
 [root@sis01 soft]# yum install -y zlib zlib-devel
@@ -313,7 +313,7 @@ FastDFS  fastdfs-nginx-module  libfastcommon-master  nginx-1.10.3
 
 调整配置项
 
-```text
+```bash
 [root@sis01 soft]# cd fastdfs-nginx-module/
 [root@sis01 fastdfs-nginx-module]# cd src/
 [root@sis01 src]# ls
@@ -326,26 +326,26 @@ common.c  common.h  config  mod_fastdfs.conf  ngx_http_fastdfs_module.c
 
 config默认值为
 
-```text
+```bash
 CORE_INCS="$CORE_INCS /usr/local/include/fastdfs /usr/local/include/fastcommon/"
 ```
 
 调整后值为
 
-```text
+```bash
 CORE_INCS="$CORE_INCS /usr/include/fastdfs /usr/include/fastcommon/"
 ```
 
 编译安装Nginx
 
-```text
+```bash
 [root@sis01 nginx-1.10.3]# ./configure --prefix=/iflytek/server/nginx-fdfs  --add-module=/iflytek/soft/fastdfs-nginx-module/src
 [root@sis01 nginx-1.10.3]# make && make install
 ```
 
 调整nginx配置文件
 
-```text
+```bash
 [root@sis01 nginx-1.10.3]# cd /iflytek/server/nginx-fdfs/
 [root@sis01 nginx-fdfs]# ls
 conf  html  logs  sbin
@@ -375,7 +375,7 @@ location /group1/M00 {
 
 ### 启动Nginx
 
-```text
+```bash
 [root@sis01 nginx-fdfs]# cd sbin/
 [root@sis01 sbin]# ls
 nginx
@@ -386,7 +386,7 @@ ngx_http_fastdfs_set pid=33388
 
 ### 配置mod\_fastdfs.conf文件
 
-```text
+```bash
 [root@sis01 src]# cd /iflytek/soft/fastdfs-nginx-module/src
 [root@sis01 src]# ls
 common.c  common.h  config  mod_fastdfs.conf  ngx_http_fastdfs_module.c
@@ -400,7 +400,7 @@ anti-steal.jpg  client.conf  client.conf.sample  http.conf  mime.types  mod_fast
 
 编辑文件内容
 
-```text
+```bash
 base_path=/iflytek/data/fdfs/nginx-module
 tracker_server=192.168.83.240:22122
 group_name=group1
@@ -412,7 +412,7 @@ store_path0=/iflytek/data/fdfs
 
 ### 重启fastdfs和nginx
 
-```text
+```bash
 [root@sis01 fdfs]# /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart
 [root@sis01 fdfs]# /usr/bin/fdfs_storaged /etc/fdfs/storage.conf restart
 [root@sis01 fdfs]# /iflytek/server/nginx-fdfs/sbin/nginx  -s reload
@@ -426,7 +426,7 @@ store_path0=/iflytek/data/fdfs
 
 ### 放置插件包
 
-```text
+```bash
 [root@sis01 plugin]# cd /iflytek/server/skynet/plugin/
 [root@sis01 plugin]# ls
 ant  readme.txt  sleuth  tuling-nlu  tuling-ssm  tuling-tts  xmanager
@@ -437,7 +437,7 @@ ant  readme.txt  sleuth  tuling-nlu  tuling-ssm  tuling-tts  tuling-usp-build-2.
 
 ### 解压插件包
 
-```text
+```bash
 [root@sis01 plugin]# unzip tuling-usp-build-2.0.0-SNAPSHOT-Build_1003.zip 
 [root@sis01 plugin]# ls
 ant  readme.txt  sleuth  tuling-nlu  tuling-ssm  tuling-tts  tuling-usp-build-2.0.0-SNAPSHOT  tuling-usp-build-2.0.0-SNAPSHOT-Build_1003.zip  xmanager
@@ -452,7 +452,7 @@ ant  readme.txt  sleuth  tuling-nlu  tuling-ssm  tuling-tts  tuling-usp  xmanage
 
 导入zk配置
 
-```text
+```bash
 [root@sis01 tuling-usp]# cd /iflytek/server/skynet/plugin/tuling-usp/
 [root@sis01 tuling-usp]# ls
 conf  doc  lib
@@ -464,13 +464,13 @@ RELEASES.md  tuling-usp.zk.config
 
 编辑配置文件
 
-```text
+```bash
 "nginxUrl": "http://127.0.0.1:8090",\n    "trackers": "127.0.0.1:22122"
 ```
 
 调整为
 
-```text
+```bash
 "nginxUrl": "http://192.168.83.240:9092",\n    "trackers": "192.168.83.240:22122"
 ```
 

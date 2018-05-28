@@ -14,7 +14,7 @@
 
 **支持输出**
 
-```text
+```bash
 [root@i-06CEBB0F ~]# cat /proc/cpuinfo |grep fma
 flags        : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc unfair_spinlock pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm xsaveopt fsgsbase bmi1 avx2 smep bmi2 invpcid
 flags        : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc unfair_spinlock pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm xsaveopt fsgsbase bmi1 avx2 smep bmi2 invpcid
@@ -29,7 +29,7 @@ flags        : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat
 
 **不支持输出**
 
-```text
+```bash
 [root@iengine-dev soft]# cat /proc/cpuinfo |grep fma
 [root@iengine-dev soft]#
 ```
@@ -46,7 +46,7 @@ flags        : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat
 
 放入语义蕴含插件
 
-```text
+```bash
 [root@sis01 plugins]# ls
 model-compare  sql  tuling-ssm-esplugin-5.4.3.zip  x-pack
 [root@sis01 plugins]# ls
@@ -70,7 +70,7 @@ model-compare  sql  tuling-ssm-esplugin-5.4.3  x-pack
 
 重启es
 
-```text
+```bash
 [root@sis01 plugins]# cd /iflytek/server/es-5.4.0/
 [root@sis01 es-5.4.0]# ls
 elasticsearch-5.4.0  elasticsearch-head-master  es.sh  es-sql-site  kibana-5.4.0-linux-x86_64  license.json  node-v6.11.0-linux-x64  setup
@@ -113,7 +113,7 @@ elasticsearch-5.4.0  elasticsearch-head-master  es.sh  es-sql-site  kibana-5.4.0
 
 放置引擎文件至目录/iflytek/engine/lib
 
-```text
+```bash
 [root@sis01 iflytek]# mkdir -p  /iflytek/engine/lib
 [root@sis01 iflytek]# cd /iflytek/engine/lib/
 [root@sis01 lib]# ls
@@ -141,7 +141,7 @@ ssm
 
 > 文件解压后要注意iFlySSM\_Linux.cfg的文件内容
 >
-> ```text
+> ```bash
 > [root@sis01 conf]# cd /iflytek/engine/lib/ssm/conf
 > [root@sis01 conf]# ls
 > iFlySSM_Linux.cfg
@@ -152,7 +152,7 @@ ssm
 
 ## 放置tuling-ssm组件
 
-```text
+```bash
 [root@sis01 plugin]# ls
 ant  readme.txt  sleuth  xmanager
 [root@sis01 plugin]# 
@@ -179,7 +179,7 @@ ant  readme.txt  sleuth  tuling-ssm  xmanager
 
 ## 赋予执行权限
 
-```text
+```bash
 [root@sis01 conf]# cd /iflytek/server/skynet/plugin/tuling-ssm/conf
 [root@sis01 conf]# ls
 tuling.ssm.sh
@@ -191,7 +191,7 @@ tuling.ssm.sh
 
 ## 导入zk配置
 
-```text
+```bash
 [root@sis01 doc]# cd /iflytek/server/skynet/plugin/tuling-ssm/doc 
 [root@sis01 doc]# ls
 RELEASES.md  tuling-ssm.zk.config
