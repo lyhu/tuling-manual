@@ -1,10 +1,12 @@
 # ZKUI部署
 
 ## 版本号
+
 2.0
 
 ## 解压压缩包
-```
+
+```text
 [root@sis01 server]# pwd
 /iflytek/server
 [root@sis01 server]# unzip zkui2.0.zip 
@@ -23,7 +25,7 @@ Archive:  zkui2.0.zip
 
 ## 赋权可执行权限
 
-```
+```text
 [root@sis01 server]# cd zkui2.0/
 [root@sis01 zkui2.0]# ls
 config.cfg  README.md  start.sh  stop.sh  zkui-2.0-SNAPSHOT-jar-with-dependencies.jar  zkui.h2.db  zkui.log
@@ -32,11 +34,11 @@ config.cfg  README.md  start.sh  stop.sh  zkui-2.0-SNAPSHOT-jar-with-dependencie
 
 ## 编辑配置文件
 
-```
+```text
 [root@sis01 zkui2.0]# vim config.cfg
 ```
 
-```
+```text
 #Server Port
 serverPort=9090
 #Comma seperated list of all the zookeeper servers
@@ -63,7 +65,6 @@ jdbcPwd=manager
 #jdbcClass=com.mysql.jdbc.Driver
 #jdbcUrl=jdbc:mysql://localhost:3306/zkui
 #jdbcUser=root
-
 ```
 
 修改zkServer配置项即可，如果是集群，将所有的server地址都填写在zkServer中，使用逗号隔开。
@@ -74,7 +75,7 @@ jdbcPwd=manager
 
 ## 启动zkui2.0
 
-```
+```text
 [root@sis01 zkui2.0]# ls
 config.cfg  README.md  start.sh  stop.sh  zkui-2.0-SNAPSHOT-jar-with-dependencies.jar  zkui.h2.db  zkui.log
 [root@sis01 zkui2.0]# ./start.sh 
@@ -83,16 +84,14 @@ INFO: ./zkui-2.0-SNAPSHOT-jar-with-dependencies.jar is running! pid=39778
 39778 zkui-2.0-SNAPSHOT-jar-with-dependencies.jar
 39901 Jps
 39454 QuorumPeerMain
-[root@sis01 zkui2.0]# 
-
+[root@sis01 zkui2.0]#
 ```
-
-
 
 ### Standalone模式
 
 #### 调整配置文件
-```
+
+```text
 [root@sis01 server]# tar -zxvf zookeeper.tar.gz
 [root@sis01 server]# rm -rf zookeeper.tar.gz
 [root@sis01 zookeeper]# pwd
@@ -100,39 +99,52 @@ INFO: ./zkui-2.0-SNAPSHOT-jar-with-dependencies.jar is running! pid=39778
 [root@sis01 zookeeper]# cd /iflytek/server/zookeeper/
 [root@sis01 zookeeper]# echo > zookeeper.out
 ```
+
 编辑文件/iflytek/server/zookeeper/conf/zoo.cfg
-```
+
+```text
 [root@sis01 conf]# vim /iflytek/server/zookeeper/conf/zoo.cfg
 ```
+
 调整配置项server.1为server.1=sis01:2888:3888
+
 > 其中dataDir配置项默认为：/home/zookeeper
-#### 新建myid文件
-创建目录/home/zookeeper
-```
-[root@sis01 conf]# mkdir /home/zookeeper
-[root@sis01 conf]# echo "1" > /home/zookeeper/myid
-[root@sis01 conf]# 
-```
-#### 启动zk服务
-```
-[root@sis01 bin]# cd /iflytek/server/zookeeper/bin
-[root@sis01 bin]# ls
-README.txt  zkCleanup.sh  zkCli.cmd  zkCli.sh  zkEnv.cmd  zkEnv.sh  zkServer.cmd  zkServer.sh  zookeeper.out
-[root@sis01 bin]# ./zkServer.sh start
-JMX enabled by default
-Using config: /iflytek/server/zookeeper/bin/../conf/zoo.cfg
-Starting zookeeper ... STARTED
-[root@sis01 bin]# 
-```
-#### 验证zk服务
-```
-[root@sis01 bin]# cd /iflytek/server/zookeeper/bin
-[root@sis01 bin]# ls
-README.txt  zkCleanup.sh  zkCli.cmd  zkCli.sh  zkEnv.cmd  zkEnv.sh  zkServer.cmd  zkServer.sh  zookeeper.out
-[root@sis01 bin]# ./zkServer.sh status
-JMX enabled by default
-Using config: /iflytek/server/zookeeper/bin/../conf/zoo.cfg
-Mode: standalone
-[root@sis01 bin]# 
-```
-至此Standalone模式服务端安装完成。
+>
+> #### 新建myid文件
+>
+> 创建目录/home/zookeeper
+>
+> ```text
+> [root@sis01 conf]# mkdir /home/zookeeper
+> [root@sis01 conf]# echo "1" > /home/zookeeper/myid
+> [root@sis01 conf]#
+> ```
+>
+> #### 启动zk服务
+>
+> ```text
+> [root@sis01 bin]# cd /iflytek/server/zookeeper/bin
+> [root@sis01 bin]# ls
+> README.txt  zkCleanup.sh  zkCli.cmd  zkCli.sh  zkEnv.cmd  zkEnv.sh  zkServer.cmd  zkServer.sh  zookeeper.out
+> [root@sis01 bin]# ./zkServer.sh start
+> JMX enabled by default
+> Using config: /iflytek/server/zookeeper/bin/../conf/zoo.cfg
+> Starting zookeeper ... STARTED
+> [root@sis01 bin]#
+> ```
+>
+> #### 验证zk服务
+>
+> ```text
+> [root@sis01 bin]# cd /iflytek/server/zookeeper/bin
+> [root@sis01 bin]# ls
+> README.txt  zkCleanup.sh  zkCli.cmd  zkCli.sh  zkEnv.cmd  zkEnv.sh  zkServer.cmd  zkServer.sh  zookeeper.out
+> [root@sis01 bin]# ./zkServer.sh status
+> JMX enabled by default
+> Using config: /iflytek/server/zookeeper/bin/../conf/zoo.cfg
+> Mode: standalone
+> [root@sis01 bin]#
+> ```
+>
+> 至此Standalone模式服务端安装完成。
+
