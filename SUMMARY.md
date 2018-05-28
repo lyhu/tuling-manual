@@ -19,7 +19,7 @@
 * [2.语音识别](2.-yu-yin-shi-bie/README.md)
   * [在线听写服务](2.-yu-yin-shi-bie/zai-xian-ting-xie-fu-wu.md)
   * [语音合成服务](2.-yu-yin-shi-bie/yu-yin-he-cheng-fu-wu.md)
-* 3.语义认知
+* [3.语义认知](3.-yu-yi-ren-zhi/README.md)
   * [语义解析服务-NLU](3.-yu-yi-ren-zhi/yu-yi-jie-xi-fu-wu-nlu.md)
   * [语义蕴含服务-SSM](3.-yu-yi-ren-zhi/yu-yi-yun-han-fu-wu-ssm.md)
 * 4.图像识别
